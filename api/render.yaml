@@ -1,11 +1,1 @@
-services:
-  - type: web
-    name: propostas-api
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
-    envVars:
-      - key: SUPABASE_URL
-        value: https://krfyyxeiodjkwkzqijig.supabase.co
-      - key: SUPABASE_KEY
-        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtyZnl5eGVpb2Rqa3drenFpamlnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE0MjkwNzUsImV4cCI6MjA3NzAwNTA3NX0.5jAh8Amo1NwEIuzjpZUv1VNY2e08xNtkuo0gjHIz31Y
+
