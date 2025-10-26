@@ -8,6 +8,10 @@ SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
+@app.get("/")
+def home():
+    return {"mensagem": "API de propostas está ativa!"}
+
 @app.get("/propostas")
 def listar_propostas():
     res = supabase.table("propostas").select("id_proposta").execute()
