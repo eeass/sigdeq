@@ -19,7 +19,7 @@ def listar_propostas():
 
 @app.get("/propostas/{id_proposta}")
 def obter_proposta(id_proposta: str):
-    res = supabase.table("propostas").select("*").eq("id_proposta", id_proposta).execute()
+    res = supabase.table("propostas").select("*").eq("id_proposta", int(id_proposta)).execute()
     if res.data:
         return res.data[0]
     return {"erro": "Proposta não encontrada"}
